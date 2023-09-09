@@ -1,28 +1,28 @@
 import React from 'react'
-
+import img1 from '../Images/client.png'
 const About = () => {
     return (
-        <div>
+        <div id='about'>
             <div className='about_heading'>About Me</div>
             <section className='about'>
                 <div className='about_box1'>
-                    <img src="https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YW5pbWV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=1000&q=60" alt="" srcset="" />
+                    <img src="https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YW5pbWV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=1000&q=60" alt="" srcSet="" />
                 </div>
                 <div className='about_box2'>
 
                     <div className='about_cards'>
                         <div className='about_card'>
-                            <div><img src="Images/client.png" alt="" srcset="" /></div>
+                            <div><img src={img1} alt="" srcSet="" /></div>
                             <div>Clients</div>
                             <div>200+ World</div>
                         </div>
                         <div className='about_card'>
-                            <div><img src="Images/client.png" alt="" srcset="" /></div>
+                            <div><img src={img1}  alt="" srcSet="" /></div>
                             <div>Clients</div>
                             <div>200+ World</div>
                         </div>
                         <div className='about_card'>
-                            <div><img src="Images/client.png" alt="" srcset="" /></div>
+                            <div><img src={img1}  alt="" srcSet="" /></div>
                             <div>Clients</div>
                             <div>200+ World</div>
                         </div>

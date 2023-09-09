@@ -2,7 +2,12 @@
     padding: 0;
     margin: 0;
     box-sizing: border;
+    scroll-behavior: smooth;
 }
+
+$bg-card : red;
+$bg-project_card : red;
+$color-head : white;
 
 @mixin flex($direction : row, $justify : center, $align : center, $gap : 0px) {
     display: flex;
@@ -24,13 +29,58 @@ button {
     border-radius: 5px;
 }
 
+// -----------NAVBAR---------------
+.nav{
+    position: fixed;
+    width: 100vw;
+    z-index: 2;
+    transition: all .4s ease;
+}
+.navbar {
+    @include flex(row, space-between, center, 0);
+    padding: 10px;
+    width: 95vw;
+
+    & ul {
+        @include flex(row, center, center, 10px);
+
+        & li {
+            @include flex(row, center, center, 0);
+
+            @media screen and (max-width : 600px) {
+                & {
+                    display: none;
+                }
+
+            }
+        }
+    }
+}
+
+.hamburger {
+    display: none;
+}
+
+@media screen and (max-width : 600px) {
+    .hamburger {
+        display: flex;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+// -----------HOME----------------
+
 
 .home {
     display: grid;
     place-items: center;
     grid-template-columns: 1fr 1fr;
     height: 100vh;
-    padding: 0 5vw;
+    padding: 0 20px;
+    position: relative;
 
     .a4 {
         display: none;
@@ -40,6 +90,8 @@ button {
         & {
             grid-template-columns: 1fr;
             gap: 2vh;
+            height: 70vh;
+            background-color: rgb(33, 156, 156);
         }
 
         & div:nth-child(1) {
@@ -60,6 +112,7 @@ button {
             display: flex;
             padding-top: 5vh;
         }
+        
     }
 }
 
@@ -71,8 +124,33 @@ button {
 }
 
 .photo img {
-    height: 100%;
+    width: 100%;
     border-radius: 80px 80px 0 0;
+}
+
+@media screen and (min-width : 1200px) {
+    .photo img {
+        width: 80%;
+    }
+
+}
+@media screen and (max-width : 600px) {
+    .photo img {
+        width: 100%;
+    }
+
+}
+
+.option{
+    display: none;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+@media screen and (max-width : 600px) {
+    .option{
+        display: flex;
+    }
 }
 
 
@@ -88,21 +166,23 @@ button {
         & {
             grid-template-columns: 1fr;
             gap: 2vh;
-
         }
     }
 
 }
+
 .about_heading {
     @include flex;
     font-size: 30px;
-    color: green;
+    color: $color-head;
     text-transform: uppercase;
+    padding-bottom: 5vh;
 }
 
 .about_box1 {
     @include flex(column, center, center, 20px);
 }
+
 .about_box2 {
     @include flex(column, center, center, 20px);
 }
@@ -113,7 +193,7 @@ button {
 
 .about_card {
     @include flex(column, center, center, 4px);
-    background-color: yellow;
+    background-color: $bg-card;
     border-radius: 10px;
     padding: 8px;
 }
@@ -121,6 +201,7 @@ button {
 
 .about div:nth-child(1) img {
     width: 80%;
+    border-radius: 20px;
 }
 
 .about div:nth-child(2) img {
@@ -130,10 +211,11 @@ button {
 
 
 //  ----------------EXPERIENCE----------------
-.experience{
+.experience {
     padding-top: 10vh;
     min-height: 100vh;
 }
+
 .exp {
     min-height: 80vh;
     display: grid;
@@ -156,7 +238,9 @@ button {
     grid-template-rows: 1fr 1fr 1fr 1fr;
     width: 40vw;
     height: 60vh;
-    border: 2px solid green;
+    border: 2px solid $color-head;
+    border-radius: 20px;
+    background-color: $bg-project_card;
     padding: 20px;
 
     @media screen and (max-width : 600px) {
@@ -173,14 +257,15 @@ button {
 .exp_heading {
     @include flex;
     font-size: 30px;
-    color: green;
+    color: $color-head;
     text-transform: uppercase;
     padding-bottom: 5vh;
 }
+
 .exp_box_heading {
     @include flex;
     font-size: 20px;
-    color: green;
+    color: $color-head;
     text-transform: uppercase;
 }
 
@@ -204,31 +289,35 @@ button {
 }
 
 // -----------------------PROJECT------------------
-.project_main{
+.project_main {
     min-height: 100vh;
     padding: 0 0 5vh 0;
 }
-.project_heading{
+
+.project_heading {
     @include flex;
     font-size: 30px;
-    color: green;
+    color: $color-head;
     text-transform: uppercase;
     padding-bottom: 5vh
 }
-.project{
-    @include flex(row,center ,center ,20px );
-    flex-wrap:wrap;
+
+.project {
+    @include flex(row, center, center, 20px);
+    flex-wrap: wrap;
     gap: 20px;
 }
-.card{
+
+.card {
     width: 250px;
     height: 350px;
     border: 2px solid red;
-    background-color: yellow;
+    background-color: $bg-card;
     border-radius: 20px;
     padding: 5px 10px;
-    @include flex(column,space-around ,flex-start ,0 );
-    & img{
+    @include flex(column, space-around, flex-start, 0);
+
+    & img {
         width: 100%;
         border-radius: 20px;
     }
@@ -237,41 +326,54 @@ button {
 
 // ---------------------CONTACT------------------
 
-.contact_main{
-    min-height: 80vh;
-}
-.contact_heading{
+.contact_heading {
     @include flex;
     font-size: 30px;
-    color: green;
+    color: $color-head;
     text-transform: uppercase;
     padding-bottom: 5vh
 }
-.contact{
+
+.contact {
     min-height: 70vh;
     display: grid;
     grid-template-columns: .4fr .6fr;
     gap: 5vw;
+
     @media screen and (max-width : 600px) {
         & {
             grid-template-columns: 1fr;
             place-items: center;
-
+            min-height: 40vh;
         }
     }
 }
-.contact_box1{
-    @include flex(column,flex-start ,flex-end ,10px )
+
+.contact_box1 {
+    @include flex(column, flex-start, flex-end, 10px);
+    @media screen and (max-width : 600px) {
+        & {
+            display: none;
+        }
+    }
 }
-.contact_card{
-    background-color: yellow;
+
+.contact_card {
+    background-color: $bg-card;
     padding: 10px;
     border-radius: 10px;
 }
-.contact_card img{
+
+.contact_card img {
     width: 20px;
     padding-bottom: 2vh;
 }
-.contact_box2{
-    @include flex(column,flex-start ,flex-start ,10px );
+
+.contact_box2 {
+    @include flex(column, flex-start, flex-start, 10px);
+    @media screen and (max-width : 600px) {
+        & {
+            @include flex;
+        }
+    }
 }
