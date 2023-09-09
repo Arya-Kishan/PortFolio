@@ -3,10 +3,12 @@
     margin: 0;
     box-sizing: border;
     scroll-behavior: smooth;
+    color: white;
 }
 
-$bg-card : red;
-$bg-project_card : red;
+$btn-color : blue;
+$bg-card : blue;
+$bg-project_card : blue;
 $color-head : white;
 
 @mixin flex($direction : row, $justify : center, $align : center, $gap : 0px) {
@@ -19,13 +21,13 @@ $color-head : white;
 
 body {
     min-height: 100vh;
-    background-color: rgb(0, 255, 255);
+    background-color: black;
 }
 
 button {
-    background-color: yellow;
-    padding: 5px 10px;
-    border: 2px solid yellow;
+    background-color: $btn-color;
+    padding: 10px 20px;
+    border: 2px solid blue;
     border-radius: 5px;
 }
 
@@ -35,6 +37,7 @@ button {
     width: 100vw;
     z-index: 2;
     transition: all .4s ease;
+    box-shadow: 0 0 10px 8px white; 
 }
 .navbar {
     @include flex(row, space-between, center, 0);
@@ -91,7 +94,6 @@ a {
             grid-template-columns: 1fr;
             gap: 2vh;
             height: 70vh;
-            background-color: rgb(33, 156, 156);
         }
 
         & div:nth-child(1) {
@@ -146,6 +148,7 @@ a {
     position: absolute;
     bottom: 0;
     right: 0;
+    
 }
 @media screen and (max-width : 600px) {
     .option{
@@ -159,8 +162,9 @@ a {
 .about {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 0 10px;
-    height: 60vh;
+    padding: 5vh 5vh;
+    min-height: 60vh;
+    @include flex(column,center ,center ,10px );
 
     @media screen and (max-width : 600px) {
         & {
@@ -176,15 +180,14 @@ a {
     font-size: 30px;
     color: $color-head;
     text-transform: uppercase;
-    padding-bottom: 5vh;
 }
 
 .about_box1 {
-    @include flex(column, center, center, 20px);
+    @include flex(column, flex-start, center, 20px);
 }
 
 .about_box2 {
-    @include flex(column, center, center, 20px);
+    @include flex(column, flex-start, flex-start, 20px);
 }
 
 .about_cards {
@@ -207,13 +210,15 @@ a {
 .about div:nth-child(2) img {
     width: 20px;
 }
-
+.about button{
+    background-color: blue;
+}
 
 
 //  ----------------EXPERIENCE----------------
 .experience {
-    padding-top: 10vh;
-    min-height: 100vh;
+    height: fit-content;
+    padding-top: 5vh 0;
 }
 
 .exp {
@@ -280,18 +285,22 @@ a {
     grid-template-rows: 1fr 1fr;
 }
 
-.ac img {
-    width: 15px;
-}
-
 .ac1 {
     grid-row: 1/3;
+}
+.aw{
+    font-size: 22px;
+}
+@media screen and (max-width : 600px) {
+    .aw {
+        font-size: 18px;
+    }
 }
 
 // -----------------------PROJECT------------------
 .project_main {
-    min-height: 100vh;
-    padding: 0 0 5vh 0;
+    height: fit-content;
+    padding: 5vh 0;
 }
 
 .project_heading {
@@ -303,25 +312,32 @@ a {
 }
 
 .project {
-    @include flex(row, center, center, 20px);
+    @include flex(row, space-evenly, center, 20px);
     flex-wrap: wrap;
     gap: 20px;
 }
 
 .card {
-    width: 250px;
-    height: 350px;
-    border: 2px solid red;
     background-color: $bg-card;
+    @include flex(column, space-around, flex-start, 20px);
+    position: relative;
+    margin: 2vh;
     border-radius: 20px;
-    padding: 5px 10px;
-    @include flex(column, space-around, flex-start, 0);
 
     & img {
-        width: 100%;
+        height: 500px;
+        width: 300px;
         border-radius: 20px;
     }
 
+}
+.card_action{
+    background: linear-gradient(transparent,black);
+    width: 93%;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
 
 // ---------------------CONTACT------------------
@@ -335,7 +351,8 @@ a {
 }
 
 .contact {
-    min-height: 70vh;
+    height: fit-content;
+    padding: 5vh 0;
     display: grid;
     grid-template-columns: .4fr .6fr;
     gap: 5vw;
@@ -370,10 +387,10 @@ a {
 }
 
 .contact_box2 {
-    @include flex(column, flex-start, flex-start, 10px);
+    @include flex(column, flex-start, flex-start, 40px);
     @media screen and (max-width : 600px) {
         & {
-            @include flex;
+            @include flex(column, flex-start, center, 40px);
         }
     }
 }

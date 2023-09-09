@@ -43,11 +43,11 @@ const Contact = () => {
                     <div>
 
                         <form className="contact_box2" action="">
-                            <TextField sx={{ width: '90%' }} id="outlined-search" label="Your Name" type="search" />
+                            <TextField sx={{ width: '90%', borderRadius: '10px', backgroundColor: 'blue' }} id="outlined-search" label="Your Name" type="search" />
 
-                            <TextField sx={{ width: '90%' }} id="outlined-search" label="Email" type="search" />
+                            <TextField sx={{ width: '90%', borderRadius: '10px', backgroundColor: 'blue' }} id="outlined-search" label="Email" type="search" />
 
-                            <TextField sx={{ width: '90%' }}
+                            <TextField sx={{ width: '90%', borderRadius: '10px', backgroundColor: 'blue' }}
                                 id="outlined-multiline-static"
                                 label="Multiline"
                                 rows={4}

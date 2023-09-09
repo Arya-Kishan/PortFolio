@@ -1,61 +1,44 @@
 import React from 'react'
-import { Button, Stack, Typography } from '@mui/material'
+import { Button, IconButton, Stack, Typography } from '@mui/material'
+import trail from '../Images/Trailflix.jpeg'
+import quiz from '../Images/Quiz.jpeg'
+import todo from '../Images/Todo.jpeg'
+import TelegramIcon from '@mui/icons-material/Telegram';
 
 const Project = () => {
     return (
         <div id='project'>
             <section className='project_main'>
-                <div className='project_heading'>Project</div>
+                <div className='project_heading'>My Work</div>
                 <section className='project'>
 
                     <div className="card">
-                        <div><img src="https://images.unsplash.com/photo-1601850494422-3cf14624b0b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGFuaW1lfGVufDB8fDB8fHww&auto=format&fit=crop&w=1000&q=60" alt="" srcSet="" /></div>
-                        <div>
-                            <Typography>Trailflix</Typography>
-                        </div>
-                        <div>
-                            <Stack direction={'row'} spacing={2}>
-                            <Button className='btn' variant='contained'>Github</Button>
-                            <Button href='https://arya-kishan.github.io/Javascript-Trailflix/' variant='contained'>Live</Button>
+                        <div><img src={trail} alt="" srcSet="" /></div>
+
+                        <div className='card_action'>
+                            <Stack direction={'row'} alignItems={'center'} justifyContent={'space-between'} spacing={2}>
+                                <Typography variant={'h5'} color={'white'}>Trailflix</Typography>
+                                <IconButton href='https://arya-kishan.github.io/Javascript-Trailflix/' variant='contained'><TelegramIcon sx={{fontSize : '30px'}} /></IconButton>
                             </Stack>
                         </div>
                     </div>
 
                     <div className="card">
-                        <div><img src="https://images.unsplash.com/photo-1601850494422-3cf14624b0b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGFuaW1lfGVufDB8fDB8fHww&auto=format&fit=crop&w=1000&q=60" alt="" srcSet="" /></div>
-                        <div>
-                            <Typography>Quiz</Typography>
-                        </div>
-                        <div>
-                            <Stack direction={'row'} spacing={2}>
-                            <Button variant='contained'>Github</Button>
-                            <Button href='https://arya-kishan.github.io/React-Quiz/' variant='contained'>Live</Button>
+                        <div><img src={quiz} alt="" srcSet="" /></div>
+                        <div className='card_action'>
+                            <Stack direction={'row'} alignItems={'center'} justifyContent={'space-between'} spacing={2}>
+                                <Typography variant={'h5'} color={'white'}>Quiz</Typography>
+                                <IconButton href='https://arya-kishan.github.io/React-Quiz/' variant='contained'><TelegramIcon sx={{fontSize : '30px'}} /></IconButton>
                             </Stack>
                         </div>
                     </div>
 
                     <div className="card">
-                        <div><img src="https://images.unsplash.com/photo-1601850494422-3cf14624b0b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGFuaW1lfGVufDB8fDB8fHww&auto=format&fit=crop&w=1000&q=60" alt="" srcSet="" /></div>
-                        <div>
-                            <Typography>TODO list</Typography>
-                        </div>
-                        <div>
-                            <Stack direction={'row'} spacing={2}>
-                            <Button variant='contained'>Github</Button>
-                            <Button href='https://arya-kishan.github.io/React-Todo/' variant='contained'>Live</Button>
-                            </Stack>
-                        </div>
-                    </div>
-
-                    <div className="card">
-                        <div><img src="https://images.unsplash.com/photo-1601850494422-3cf14624b0b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGFuaW1lfGVufDB8fDB8fHww&auto=format&fit=crop&w=1000&q=60" alt="" srcSet="" /></div>
-                        <div>
-                            <Typography>Calculator</Typography>
-                        </div>
-                        <div>
-                            <Stack direction={'row'} spacing={2}>
-                            <Button variant='contained'>Github</Button>
-                            <Button href='https://arya-kishan.github.io/React-Calculator/' variant='contained'>Live</Button>
+                        <div><img src={todo} alt="" srcSet="" /></div>
+                        <div className='card_action'>
+                            <Stack direction={'row'} alignItems={'center'} justifyContent={'space-between'} spacing={2}>
+                                <Typography variant={'h5'} color={'white'}>TODO list</Typography>
+                                <IconButton href='https://arya-kishan.github.io/React-Todo/' variant='contained'><TelegramIcon sx={{fontSize : '30px'}} /></IconButton>
                             </Stack>
                         </div>
                     </div>

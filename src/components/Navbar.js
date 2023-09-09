@@ -13,7 +13,7 @@ const Navbar = () => {
 
   window.addEventListener('scroll', () => {
     if (window.scrollY > 5) {
-      setBg('yellow')
+      setBg('blue')
     } else if (window.scrollY < 5) {
       setBg('transparent')
     }

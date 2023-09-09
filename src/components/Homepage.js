@@ -25,7 +25,7 @@ export default function Homepage() {
 
             <Stack className='a2' spacing={2} direction={'row'}>
               <button variant='outlined'>Download CV</button>
-              <button variant='contained'>Let's Talk</button>
+              <button variant='contained'><a href="#contact">Let's Talk</a></button>
             </Stack>
 
           </Stack>
@@ -39,19 +39,19 @@ export default function Homepage() {
 
         </div>
 
-        <Stack className='option'>
+        <div className='option'>
 
-          <Stack width={'100%'} direction={'row'} justifyContent={'flex-end'}>
-            <IconButton onClick={() => { setShow(show === 'none' ? 'flex' : 'none') }}><PeopleIcon /></IconButton>
+          <Stack className='option_icon' width={'100%'} direction={'row'} justifyContent={'flex-end'}>
+            <IconButton sx={{ color: 'yellow' }} onClick={() => { setShow(show === 'none' ? 'flex' : 'none') }}><PeopleIcon /></IconButton>
           </Stack>
 
           <Stack display={show} width={'100%'} direction={'column'} alignItems={'flex-end'}>
-            <IconButton href="tel:7762994583"><PhoneIcon /></IconButton>
-            <IconButton href="mailto:arya12345kishan@gmail.com"><MailOutlineOutlinedIcon /></IconButton>
-            <IconButton href='https://wa.me/7762994583'><WhatsAppIcon /></IconButton>
+            <IconButton sx={{ color: 'yellow' }} href="tel:7762994583"><PhoneIcon /></IconButton>
+            <IconButton sx={{ color: 'yellow' }} href="mailto:arya12345kishan@gmail.com"><MailOutlineOutlinedIcon /></IconButton>
+            <IconButton sx={{ color: 'yellow' }} href='https://wa.me/7762994583'><WhatsAppIcon /></IconButton>
           </Stack>
 
-        </Stack>
+        </div>
       </section>
 
     </div>
