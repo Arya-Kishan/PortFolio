@@ -54,12 +54,14 @@ const Navbar = () => {
           open={open}
           onClose={() => { setOpen(false) }}
         >
-          <Stack bgcolor={'aqua'} width={'100%'}>
+          <Stack alignItems={'center'} bgcolor={'blue'} width={'100%'}>
+            <Stack alignItems={'flex-start'}>
             <Button startIcon={<HomeIcon/>} onClick={() => { setOpen(false) }}><a href="#home">Home</a></Button>
             <Button startIcon={<PersonIcon/>} onClick={() => { setOpen(false) }}><a href="#about">About</a></Button>
             <Button startIcon={<BackpackIcon/>} onClick={() => { setOpen(false) }}><a href="#experience">Experience</a></Button>
             <Button startIcon={<ContentPasteGoIcon/>} onClick={() => { setOpen(false) }}><a href="#project">Project</a></Button>
             <Button startIcon={<PhoneIcon/>} onClick={() => { setOpen(false) }}><a href="#contact">Contact</a></Button>
+            </Stack>
           </Stack>
         </Drawer>
       </section>

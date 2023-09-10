@@ -1,19 +1,26 @@
 import { IconButton, Stack, Typography } from '@mui/material'
-import InstagramIcon from '@mui/icons-material/Instagram';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import TwitterIcon from '@mui/icons-material/Twitter';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import PhoneIcon from '@mui/icons-material/Phone';
+import MailOutlineOutlinedIcon from '@mui/icons-material/MailOutlineOutlined';
 import React from 'react'
 
 const Footer = () => {
   return (
-    <div>
-      <Stack direction={'row'} justifyContent={'center'} alignItems={'center'} spacing={4} padding={'10px'}><Typography>ARYA KISHAN : </Typography>
-        <IconButton><FacebookIcon /></IconButton>
-        <IconButton><InstagramIcon /></IconButton>
-        <IconButton><TwitterIcon /></IconButton>
+    <>
+
+      <Stack width={'100%'} direction={'row'} justifyContent={'center'} alignItems={'center'}>
+
+        <Typography>GET IN TOUCH : </Typography>
+
+        <IconButton href="tel:7762994583"><PhoneIcon /></IconButton>
+
+        <IconButton href="mailto:arya12345kishan@gmail.com"><MailOutlineOutlinedIcon /></IconButton>
+
+        <IconButton href='https://wa.me/7762994583'><WhatsAppIcon /></IconButton>
+
       </Stack>
 
-    </div>
+    </>
   )
 }
 

@@ -49,7 +49,7 @@ const About = () => {
 
                     <div className='about_heading2'>About Me</div>
 
-                    <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt at eligendi optio, id nobis dignissimos, praesentium fuga sequi molestias perferendis ipsam officiis inventore, asperiores eaque natus voluptate. Et officia quaerat ducimus itaque sint explicabo amet?</div>
+                    <div>Having strong roots in CSS, HTML and JAVASCRIPT, I am a Front-End Developer trained in modern designing tools and frameworks with entry-level experience specializing in web development, user interface design with responsive and React JS. </div>
 
                     <Stack direction={'row'} spacing={'4vw'}>
                         <div><button style={{backgroundColor : 'black'}} onClick={(e) => { Show11(e) }} className='btn'>Skills</button></div>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, IconButton, Stack, Typography } from '@mui/material'
+import { IconButton, Stack, Typography } from '@mui/material'
 import trail from '../Images/Trailflix.jpeg'
 import quiz from '../Images/Quiz.jpeg'
 import todo from '../Images/Todo.jpeg'

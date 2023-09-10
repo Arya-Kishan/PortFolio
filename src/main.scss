@@ -29,8 +29,7 @@ button {
     background-color: $bg-btn;
     padding: 10px 15px;
     border: 2px solid blue;
-    border-radius: 5px;
-    box-shadow: 0 0 5px 4px blue;
+    border-radius: 10px;
 }
 
 // -----------NAVBAR---------------
@@ -39,7 +38,7 @@ button {
     width: 100vw;
     z-index: 2;
     transition: all .4s ease;
-    box-shadow: 0 0 10px 8px white;
+    box-shadow: 0 0 8px 4px white;
 }
 
 .navbar {
@@ -96,7 +95,7 @@ a {
         & {
             grid-template-columns: 1fr;
             gap: 2vh;
-            height: 70vh;
+            min-height: 70vh;
         }
 
         & div:nth-child(1) {
@@ -105,12 +104,6 @@ a {
 
         & div:nth-child(2) {
             order: 1;
-        }
-
-        .a1,
-        .a2,
-        .a3 {
-            display: none;
         }
 
         .a4 {
@@ -134,9 +127,14 @@ a {
 }
 
 @media screen and (min-width : 1200px) {
+    .photo {
+        height: fit-content;
+    
+    }
     .photo img {
         width: 80%;
     }
+    
 
 }
 
@@ -144,21 +142,16 @@ a {
     .photo img {
         width: 100%;
     }
-
-}
-
-.option {
-    display: none;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-
-}
-
-@media screen and (max-width : 700px) {
-    .option {
-        @include flex(column, space-evenly, center, 0)
+    .homepage_pic_div{
+        display: flex;
+        justify-content: flex-end;
+        height: 20vh;
     }
+
+}
+
+.download_btn button{
+    background-color: transparent;
 }
 
 
@@ -368,7 +361,7 @@ a {
 }
 
 .card_action {
-    background: linear-gradient(transparent, black);
+    background: linear-gradient(transparent,black, black);
     width: 93%;
     padding: 10px;
     position: absolute;
@@ -443,7 +436,7 @@ a {
     background-color: $bg-input;
     border-radius: 15px;
     color: white;
-    padding: 10px;
+    padding: 15px;
     font-size: 17px;
     color: blue;
 }
@@ -453,3 +446,4 @@ a {
     }
     
 }
+// --------------------------------- FOOTER -------------------------------
