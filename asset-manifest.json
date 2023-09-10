@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/PortFolio/static/css/main.bd5c03c1.css",
-    "main.js": "/PortFolio/static/js/main.e4cf12da.js",
+    "main.js": "/PortFolio/static/js/main.b503a6e2.js",
     "static/media/code1.png": "/PortFolio/static/media/code1.1cba8dab5d3900749025.png",
     "static/media/Trailflix.jpeg": "/PortFolio/static/media/Trailflix.eddba160d9a71b0d36b7.jpeg",
     "static/media/Quiz.jpeg": "/PortFolio/static/media/Quiz.d82e1bc2e46b3d3ad252.jpeg",
@@ -9,10 +9,10 @@
     "static/media/Todo.jpeg": "/PortFolio/static/media/Todo.1a307269137e5f53e649.jpeg",
     "index.html": "/PortFolio/index.html",
     "main.bd5c03c1.css.map": "/PortFolio/static/css/main.bd5c03c1.css.map",
-    "main.e4cf12da.js.map": "/PortFolio/static/js/main.e4cf12da.js.map"
+    "main.b503a6e2.js.map": "/PortFolio/static/js/main.b503a6e2.js.map"
   },
   "entrypoints": [
     "static/css/main.bd5c03c1.css",
-    "static/js/main.e4cf12da.js"
+    "static/js/main.b503a6e2.js"
   ]
 }
