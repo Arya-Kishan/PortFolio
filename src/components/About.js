@@ -1,23 +1,38 @@
 import React, { useState } from 'react'
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import { Box, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Stack, Typography } from '@mui/material'
+import { List, ListItem, ListItemIcon, ListItemText, Stack, Typography } from '@mui/material'
 const About = () => {
 
-    const [show1,setShow1] = useState('flex')
-    const [show2,setShow2] = useState('none')
-    const [show3,setShow3] = useState('none')
+    const [show1, setShow1] = useState('flex')
+    const [show2, setShow2] = useState('none')
+    const [show3, setShow3] = useState('none')
 
-    const Show11 = ()=>{
+    const remove = ()=>{
+        let list = document.getElementsByTagName('button');
+        list = Array.from(list)
+        console.log(list)
+        list.forEach(element => {
+            element.style.backgroundColor = 'blue';
+        });
+      }
+
+    const Show11 = (e) => {
+        remove();
+        e.target.style.backgroundColor = 'black';
         setShow1('flex')
         setShow2('none')
         setShow3('none')
     }
-    const Show22 = ()=>{
+    const Show22 = (e) => {
+        remove();
+        e.target.style.backgroundColor = 'black';
         setShow1('none')
         setShow2('flex')
         setShow3('none')
     }
-    const Show33 = ()=>{
+    const Show33 = (e) => {
+        remove();
+        e.target.style.backgroundColor = 'black';
         setShow1('none')
         setShow2('none')
         setShow3('flex')
@@ -25,43 +40,44 @@ const About = () => {
 
     return (
         <div id='about'>
+            <div className='about_heading1'>About Me</div>
             <section className='about'>
                 <div className='about_box1'>
                     <img src="https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YW5pbWV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=1000&q=60" alt="" srcSet="" />
                 </div>
                 <div className='about_box2'>
 
-                    <div className='about_heading'>About Me</div>
+                    <div className='about_heading2'>About Me</div>
 
                     <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt at eligendi optio, id nobis dignissimos, praesentium fuga sequi molestias perferendis ipsam officiis inventore, asperiores eaque natus voluptate. Et officia quaerat ducimus itaque sint explicabo amet?</div>
 
-                    <Stack direction={'row'} spacing={4}>
-                    <div><button onClick={()=>{Show11()}} className='btn' variant='contained'>Skills</button></div>
-                    <div><button onClick={()=>{Show22()}} className='btn' variant='contained'>Experience</button></div>
-                    <div><button onClick={()=>{Show33()}} className='btn' variant='contained'>Education</button></div>
+                    <Stack direction={'row'} spacing={'4vw'}>
+                        <div><button style={{backgroundColor : 'black'}} onClick={(e) => { Show11(e) }} className='btn'>Skills</button></div>
+                        <div><button onClick={(e) => { Show22(e) }} className='btn'>Experience</button></div>
+                        <div><button onClick={(e) => { Show33(e) }} className='btn'>Education</button></div>
                     </Stack>
 
                     <div>
                         <Stack display={show1} spacing={2}>
                             <List>
                                 <ListItem>
-                                    <ListItemIcon><ArrowForwardIcon/></ListItemIcon>
+                                    <ListItemIcon><ArrowForwardIcon /></ListItemIcon>
                                     <ListItemText>Frontend Development</ListItemText>
                                 </ListItem>
                                 <ListItem>
-                                    <ListItemIcon><ArrowForwardIcon/></ListItemIcon>
+                                    <ListItemIcon><ArrowForwardIcon /></ListItemIcon>
                                     <ListItemText>SASS</ListItemText>
                                 </ListItem>
                                 <ListItem>
-                                    <ListItemIcon><ArrowForwardIcon/></ListItemIcon>
+                                    <ListItemIcon><ArrowForwardIcon /></ListItemIcon>
                                     <ListItemText>GIT & GITHUB</ListItemText>
                                 </ListItem>
                                 <ListItem>
-                                    <ListItemIcon><ArrowForwardIcon/></ListItemIcon>
+                                    <ListItemIcon><ArrowForwardIcon /></ListItemIcon>
                                     <ListItemText>RESPONSIVE WEB DESIGN</ListItemText>
                                 </ListItem>
                                 <ListItem>
-                                    <ListItemIcon><ArrowForwardIcon/></ListItemIcon>
+                                    <ListItemIcon><ArrowForwardIcon /></ListItemIcon>
                                     <ListItemText>MATERIAL UI</ListItemText>
                                 </ListItem>
                             </List>

@@ -6,6 +6,7 @@ import PhoneIcon from '@mui/icons-material/Phone';
 import PeopleIcon from '@mui/icons-material/People';
 import code1 from '../Images/code1.png'
 import MailOutlineOutlinedIcon from '@mui/icons-material/MailOutlineOutlined';
+import cv from '../arya_cv.pdf'
 
 export default function Homepage() {
 
@@ -18,14 +19,14 @@ export default function Homepage() {
         <div>
           <Stack justifyContent={'center'} alignItems={'center'} spacing={4}>
             <Stack className='a1' justifyContent={'center'} alignItems={'center'} spacing={0}>
-              <Typography variant='subtitle1'>Hello I'm</Typography>
-              <Typography variant='h4'>Arya Kishan</Typography>
-              <Typography variant='caption'>Frontend Developer</Typography>
+              <Typography variant='h5'>Hello I'm</Typography>
+              <Typography variant='h2'>Arya Kishan</Typography>
+              <Typography variant='h5'>Frontend Developer</Typography>
             </Stack>
 
             <Stack className='a2' spacing={2} direction={'row'}>
-              <button variant='outlined'>Download CV</button>
-              <button variant='contained'><a href="#contact">Let's Talk</a></button>
+              <a href={cv} download="arya_cv"><button >Download CV</button></a>
+                <button ><a href="#contact">Let's Talk</a></button>
             </Stack>
 
           </Stack>
@@ -46,9 +47,9 @@ export default function Homepage() {
           </Stack>
 
           <Stack display={show} width={'100%'} direction={'column'} alignItems={'flex-end'}>
-            <IconButton sx={{ color: 'yellow' }} href="tel:7762994583"><PhoneIcon /></IconButton>
-            <IconButton sx={{ color: 'yellow' }} href="mailto:arya12345kishan@gmail.com"><MailOutlineOutlinedIcon /></IconButton>
-            <IconButton sx={{ color: 'yellow' }} href='https://wa.me/7762994583'><WhatsAppIcon /></IconButton>
+            <IconButton href="tel:7762994583"><PhoneIcon /></IconButton>
+            <IconButton href="mailto:arya12345kishan@gmail.com"><MailOutlineOutlinedIcon /></IconButton>
+            <IconButton href='https://wa.me/7762994583'><WhatsAppIcon /></IconButton>
           </Stack>
 
         </div>

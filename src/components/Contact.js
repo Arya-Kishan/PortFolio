@@ -1,10 +1,34 @@
-import React from 'react'
-import { Button, Stack, TextField, Typography } from '@mui/material'
+import React, { useRef } from 'react'
+import { Button, Stack, Typography } from '@mui/material'
 import email from '../Images/email.png'
 import messenger from '../Images/messenger.png'
 import whatsapp from '../Images/whats app.png'
+import emailjs from 'emailjs-com'
+
 
 const Contact = () => {
+    const form = useRef();
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs.sendForm('service_jyzpe85', 'template_4e0qade', form.current, 'uNmBipyUvWR34WO5x')
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
+        let input12 = document.getElementsByTagName('input');
+        input12 = Array.from(input12);
+        input12.forEach(element => {
+            element.value = '';
+        });
+
+        let textarea12 = document.getElementsByTagName('textarea');
+        textarea12 = Array.from(textarea12);
+        textarea12.forEach(element => {
+            element.value = '';
+        });
+    };
     return (
         <div>
             <section className='contact_main' id='contact'>
@@ -15,9 +39,9 @@ const Contact = () => {
                         <Button href="mailto:arya12345kishan@gmail.com">
                             <Stack width={'200px'} className='contact_card' alignItems={'center'}>
                                 <img src={email} alt="" srcSet="" />
-                                <Typography variant='span' color={'black'}>Email</Typography>
-                                <Typography variant='span' color={'black'}>arya69code@gmail.com</Typography>
-                                <Typography variant='span' color={'black'}>Send a message</Typography>
+                                <Typography variant='span' color={'white'}>Email</Typography>
+                                <Typography variant='span' color={'white'} textTransform={'lowercase'}>arya69code@gmail.com</Typography>
+                                <Typography variant='b' color={'yellow'} pt={'2vh'}>Send a message</Typography>
                             </Stack>
                         </Button>
 
@@ -25,33 +49,29 @@ const Contact = () => {
 
                             <Stack width={'200px'} className='contact_card' alignItems={'center'}>
                                 <img src={messenger} alt="" srcSet="" />
-                                <Typography variant='span' color={'black'}>Messenger</Typography>
-                                <Typography variant='span' color={'black'}>aryarajput</Typography>
-                                <Typography variant='span' color={'black'}>Send a message</Typography>
+                                <Typography variant='span' color={'white'}>Messenger</Typography>
+                                <Typography variant='span' color={'white'} textTransform={'lowercase'}>aryarajput</Typography>
+                                <Typography variant='b' color={'yellow'} pt={'2vh'}>Send a message</Typography>
                             </Stack>
                         </Button>
 
                         <Button href='https://wa.me/7762994583'>
                             <Stack width={'200px'} className='contact_card' alignItems={'center'}>
                                 <img src={whatsapp} alt="" srcSet="" />
-                                <Typography variant='span' color={'black'}>whatsapp</Typography>
-                                <Typography variant='span' color={'black'}>7762994583</Typography>
-                                <Typography variant='span' color={'black'}>Send a message</Typography>
+                                <Typography variant='span' color={'white'}>whatsapp</Typography>
+                                <Typography variant='span' color={'white'} textTransform={'lowercase'}>7762994583</Typography>
+                                <Typography variant='b' color={'yellow'} pt={'2vh'}>Send a message</Typography>
                             </Stack>
                         </Button>
                     </div>
                     <div>
 
-                        <form className="contact_box2" action="">
-                            <TextField sx={{ width: '90%', borderRadius: '10px', backgroundColor: 'blue' }} id="outlined-search" label="Your Name" type="search" />
+                        <form className="contact_box2" ref={form} onSubmit={sendEmail}>
+                            <input type='text' name='name' className='input' placeholder='Your Name' />
 
-                            <TextField sx={{ width: '90%', borderRadius: '10px', backgroundColor: 'blue' }} id="outlined-search" label="Email" type="search" />
+                            <input type='email' name='email' className='input' placeholder='Your Email' />
 
-                            <TextField sx={{ width: '90%', borderRadius: '10px', backgroundColor: 'blue' }}
-                                id="outlined-multiline-static"
-                                label="Multiline"
-                                rows={4}
-                            />
+                            <textarea rows="8" cols="50" name='message' className='input' placeholder='Your Message' />
 
                             <button>Send</button>
                         </form>

@@ -18,6 +18,20 @@ const Navbar = () => {
       setBg('transparent')
     }
   })
+
+  const remove = ()=>{
+    let list = document.getElementsByTagName('li');
+    list = Array.from(list)
+    console.log(list)
+    list.forEach(element => {
+      element.style.borderBottom = 'none';
+    });
+  }
+  const shine = (e)=>{
+    remove()
+    e.target.parentElement.style.borderBottom = '2px solid red';
+  }
+
   return (
     <div>
       <section className='nav' style={{ backgroundColor: bg }}>
@@ -25,18 +39,18 @@ const Navbar = () => {
           <div><Typography variant='h4' color={'white'}>Coder</Typography></div>
           <div>
             <ul className='navbar_ul'>
-              <li><a href="#home">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#experience">Experience</a></li>
-              <li><a href="#project">Project</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li style={{borderBottom : '2px solid red'}} onClick={(e)=>{shine(e)}}><a href="#home">Home</a></li>
+              <li onClick={(e)=>{shine(e)}}><a href="#about">About</a></li>
+              <li onClick={(e)=>{shine(e)}}><a href="#experience">Experience</a></li>
+              <li onClick={(e)=>{shine(e)}}><a href="#project">Project</a></li>
+              <li onClick={(e)=>{shine(e)}}><a href="#contact">Contact</a></li>
               <div className='hamburger'><IconButton onClick={() => { setOpen(true) }}><MenuIcon /></IconButton></div>
             </ul>
           </div>
         </section>
 
         <Drawer
-          anchor={'top'}
+          anchor={'bottom'}
           open={open}
           onClose={() => { setOpen(false) }}
         >

@@ -7,7 +7,7 @@ import React from 'react'
 const Footer = () => {
   return (
     <div>
-      <Stack direction={'row'} justifyContent={'center'} alignItems={'center'}><Typography>ARYA KISHAN : </Typography>
+      <Stack direction={'row'} justifyContent={'center'} alignItems={'center'} spacing={4} padding={'10px'}><Typography>ARYA KISHAN : </Typography>
         <IconButton><FacebookIcon /></IconButton>
         <IconButton><InstagramIcon /></IconButton>
         <IconButton><TwitterIcon /></IconButton>
