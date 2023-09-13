@@ -1,20 +1,21 @@
 import React, { useState } from 'react'
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { List, ListItem, ListItemIcon, ListItemText, Stack, Typography } from '@mui/material'
+import { motion } from 'framer-motion'
 const About = () => {
 
     const [show1, setShow1] = useState('flex')
     const [show2, setShow2] = useState('none')
     const [show3, setShow3] = useState('none')
 
-    const remove = ()=>{
+    const remove = () => {
         let list = document.getElementsByTagName('button');
         list = Array.from(list)
         console.log(list)
         list.forEach(element => {
             element.style.backgroundColor = 'blue';
         });
-      }
+    }
 
     const Show11 = (e) => {
         remove();
@@ -52,9 +53,32 @@ const About = () => {
                     <div>Having strong roots in CSS, HTML and JAVASCRIPT, I am a Front-End Developer trained in modern designing tools and frameworks with entry-level experience specializing in web development, user interface design with responsive and React JS.Keeping in mind the importance and growth of mobile-oriented market I always prefer a mobile-first approach by desining  </div>
 
                     <Stack direction={'row'} spacing={'4vw'}>
-                        <div><button style={{backgroundColor : 'black'}} onClick={(e) => { Show11(e) }} className='btn'>Skills</button></div>
-                        <div><button onClick={(e) => { Show22(e) }} className='btn'>Experience</button></div>
-                        <div><button onClick={(e) => { Show33(e) }} className='btn'>Education</button></div>
+
+                        <motion.div
+                            initial={{ scale: 0 }}
+                            whileInView={{ scale: 1 }}
+                            transition={{ duration: .3 }}
+                            viewport={{once : true}}>
+                            <button style={{ backgroundColor: 'black' }} onClick={(e) => { Show11(e) }} className='btn'>Skills</button>
+                        </motion.div>
+
+                        <motion.div
+                            initial={{ scale: 0 }}
+                            whileInView={{ scale: 1 }}
+                            transition={{ duration: .3 }}
+                            viewport={{once : true}}>
+
+                            <button onClick={(e) => { Show22(e) }} className='btn'>Experience</button>
+                        </motion.div>
+
+                        <motion.div
+                            initial={{ scale: 0 }}
+                            whileInView={{ scale: 1 }}
+                            transition={{ duration: .3 }}
+                            viewport={{once : true}}>
+                            <button onClick={(e) => { Show33(e) }} className='btn'>Education</button>
+                        </motion.div>
+
                     </Stack>
 
                     <div>

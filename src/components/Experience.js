@@ -55,7 +55,7 @@ const Experience = () => {
                             <div>
                                 <div className='ac'>
                                     <div className='ac1 aw'><NavigationIcon sx={{rotate : '90deg'}}/></div>
-                                    <div className='aw'><b>REDUX</b></div>
+                                    <div className='aw'><b>REDUX-TOOLKIT</b></div>
                                     <div className='aw'><span>INTERMEDIATE</span></div>
                                 </div>
                             </div>

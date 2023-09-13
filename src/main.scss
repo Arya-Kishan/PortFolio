@@ -30,6 +30,7 @@ button {
     padding: 10px 15px;
     border: 2px solid blue;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 // -----------NAVBAR---------------
@@ -129,12 +130,13 @@ a {
 @media screen and (min-width : 1200px) {
     .photo {
         height: fit-content;
-    
+
     }
+
     .photo img {
         width: 80%;
     }
-    
+
 
 }
 
@@ -142,7 +144,8 @@ a {
     .photo img {
         width: 100%;
     }
-    .homepage_pic_div{
+
+    .homepage_pic_div {
         display: flex;
         justify-content: flex-end;
         height: 20vh;
@@ -150,7 +153,7 @@ a {
 
 }
 
-.download_btn button{
+.download_btn button {
     background-color: transparent;
 }
 
@@ -314,6 +317,9 @@ a {
     .aw {
         font-size: 15px;
     }
+    .exp_box_heading {
+        font-size: 20px;
+    }
 }
 
 // -----------------------PROJECT------------------
@@ -338,6 +344,7 @@ a {
 }
 
 .card {
+    cursor: pointer;
     background-color: $bg-input-card;
     @include flex(column, space-around, flex-start, 20px);
     position: relative;
@@ -361,7 +368,7 @@ a {
 }
 
 .card_action {
-    background: linear-gradient(transparent,black, black);
+    background: linear-gradient(transparent, black, black);
     width: 93%;
     padding: 10px;
     position: absolute;
@@ -425,7 +432,8 @@ a {
             width: 60vw;
             @include flex(column, flex-start, center, 40px);
         }
-        & button{
+
+        & button {
             width: 50%;
         }
     }
@@ -440,10 +448,27 @@ a {
     font-size: 17px;
     color: blue;
 }
+
 @media screen and (max-width : 700px) {
     .input {
         width: 100%;
     }
-    
+
 }
+
 // --------------------------------- FOOTER -------------------------------
+.more_project {
+    width: 100vw;
+    height: 100vh;
+    overflow: scroll;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: linear-gradient(transparent,black);
+    z-index: 12;
+}
