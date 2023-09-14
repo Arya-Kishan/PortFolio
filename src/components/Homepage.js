@@ -10,7 +10,7 @@ export default function Homepage() {
     <div id='home'>
       <section className='home'>
 
-        <div>
+        <div className='animate__animated animate__backInLeft '>
           <Stack justifyContent={'center'} alignItems={'center'} spacing={4}>
             <Stack className='a1' justifyContent={'center'} alignItems={'center'} spacing={0}>
               <Typography variant='h5'>Hello I'm</Typography>
@@ -26,7 +26,7 @@ export default function Homepage() {
           </Stack>
         </div>
 
-        <div className='homepage_pic_div'>
+        <div className='homepage_pic_div animate__animated animate__backInRight'>
           <Stack width={'60vw'} height={'60vh'} spacing={2} justifyContent={'space-around'} alignItems={'center'} direction={'column'}>
             <div className="photo"><img src={code1} alt="" srcSet="" /></div>
           </Stack>
