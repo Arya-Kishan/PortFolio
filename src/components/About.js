@@ -57,16 +57,14 @@ const About = () => {
                         <motion.div
                             initial={{ scale: 0 }}
                             whileInView={{ scale: 1 }}
-                            transition={{ duration: .3 }}
-                            viewport={{once : true}}>
+                            transition={{ duration: .3 }}>
                             <button style={{ backgroundColor: 'black' }} onClick={(e) => { Show11(e) }} className='btn'>Skills</button>
                         </motion.div>
 
                         <motion.div
                             initial={{ scale: 0 }}
                             whileInView={{ scale: 1 }}
-                            transition={{ duration: .3 }}
-                            viewport={{once : true}}>
+                            transition={{ duration: .3 }}>
 
                             <button onClick={(e) => { Show22(e) }} className='btn'>Experience</button>
                         </motion.div>
@@ -74,8 +72,7 @@ const About = () => {
                         <motion.div
                             initial={{ scale: 0 }}
                             whileInView={{ scale: 1 }}
-                            transition={{ duration: .3 }}
-                            viewport={{once : true}}>
+                            transition={{ duration: .3 }}>
                             <button onClick={(e) => { Show33(e) }} className='btn'>Education</button>
                         </motion.div>
 

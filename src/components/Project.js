@@ -18,7 +18,6 @@ import { motion } from 'framer-motion'
 const Project = () => {
 
     const [more, setMore] = useState(false)
-    const [setOpen] = React.useState(false);
     const { showSnack } = useContext(Context)
     const [project, setProject] = useState([
         {
@@ -88,6 +87,7 @@ const Project = () => {
     const moreProductSnack = () => {
         setMore(true);
         showSnack('CLICK OUTSIDE CARD TO CLOSE !')
+        window.history.pushState({ id: 1 }, "", "")
     }
 
 
@@ -98,8 +98,8 @@ const Project = () => {
                 <section className='project'>
                     {
                         project.map((e) => (
-                            <div style={{ width: '300px', height: '500px' }} onClick={() => { window.location.href = `${e.link}` }} className="card">
-                                <div><img style={{ width: '300px', height: '500px' }} src={e.img} alt="" srcSet="" /></div>
+                            <div onClick={() => { window.location.href = `${e.link}` }} className="card">
+                                <div><img src={e.img} alt="" srcSet="" /></div>
                                 <div className='card_action'>
                                     <Stack direction={'row'} alignItems={'center'} justifyContent={'space-between'} spacing={2}>
                                         <Typography variant={'h5'} color={'white'}>{e.name}</Typography>
@@ -107,8 +107,8 @@ const Project = () => {
                                             <motion.div
                                                 initial={{ scale: 0 }}
                                                 whileInView={{ scale: 1 }}
-                                                transition={{ duration: .5 }}
-                                                viewport={{ once: true }}><GitHubIcon sx={{ fontSize: '30px' }} /></motion.div>
+                                                transition={{ duration: .3 }}>
+                                                <GitHubIcon sx={{ fontSize: '30px' }} /></motion.div>
                                         </IconButton>
                                     </Stack>
                                 </div>
@@ -118,9 +118,12 @@ const Project = () => {
                 </section>
 
 
-                <Stack alignItems={'flex-end'} m={'20px'}>
-                    <button onClick={() => { moreProductSnack() }} style={{ width: 'fit-content', backgroundColor: 'transparent' }}>More</button>
-                </Stack>
+                <div className='product_more_btn'>
+                    <motion.button initial={{ scale: 0 }}
+                        whileInView={{ scale: 1 }}
+                        transition={{ duration: .2 }}
+                        onClick={() => { moreProductSnack() }} style={{ width: 'fit-content', backgroundColor: 'transparent' }}>More</motion.button>
+                </div>
 
             </section>
 
@@ -139,8 +142,8 @@ const Project = () => {
                     className='more_project' onClick={() => { setMore(false) }}>
                     {
                         moreProject.map((e) => (
-                            <div style={{ width: '300px', height: '500px' }} onClick={() => { window.location.href = `${e.link}` }} className="card">
-                                <div><img style={{ width: '300px', height: '500px' }} src={e.img} alt="" srcSet="" /></div>
+                            <div onClick={() => { window.location.href = `${e.link}` }} className="card">
+                                <div><img src={e.img} alt="" srcSet="" /></div>
                                 <div className='card_action'>
                                     <Stack direction={'row'} alignItems={'center'} justifyContent={'space-between'} spacing={2}>
                                         <Typography variant={'h5'} color={'white'}>{e.name}</Typography>

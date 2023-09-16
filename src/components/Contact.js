@@ -40,7 +40,6 @@ const Contact = () => {
                             <Stack width={'200px'} className='contact_card' alignItems={'center'}>
                                 <img src={email} alt="" srcSet="" />
                                 <Typography variant='span' color={'white'}>Email</Typography>
-                                <Typography variant='span' color={'white'} textTransform={'lowercase'}>arya69code@gmail.com</Typography>
                                 <Typography variant='b' color={'yellow'} pt={'2vh'}>Send a message</Typography>
                             </Stack>
                         </Button>
@@ -50,7 +49,6 @@ const Contact = () => {
                             <Stack width={'200px'} className='contact_card' alignItems={'center'}>
                                 <img src={messenger} alt="" srcSet="" />
                                 <Typography variant='span' color={'white'}>Messenger</Typography>
-                                <Typography variant='span' color={'white'} textTransform={'lowercase'}>aryarajput</Typography>
                                 <Typography variant='b' color={'yellow'} pt={'2vh'}>Send a message</Typography>
                             </Stack>
                         </Button>
@@ -59,7 +57,6 @@ const Contact = () => {
                             <Stack width={'200px'} className='contact_card' alignItems={'center'}>
                                 <img src={whatsapp} alt="" srcSet="" />
                                 <Typography variant='span' color={'white'}>whatsapp</Typography>
-                                <Typography variant='span' color={'white'} textTransform={'lowercase'}>7762994583</Typography>
                                 <Typography variant='b' color={'yellow'} pt={'2vh'}>Send a message</Typography>
                             </Stack>
                         </Button>

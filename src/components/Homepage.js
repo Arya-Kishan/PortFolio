@@ -3,6 +3,7 @@ import '../main.scss'
 import { Stack, Typography } from '@mui/material'
 import code1 from '../Images/code1.png'
 import cv from '../arya_cv.pdf'
+import { motion } from 'framer-motion'
 
 export default function Homepage() {
 
@@ -18,8 +19,12 @@ export default function Homepage() {
               <Typography variant='h5'>Frontend Developer</Typography>
 
               <Stack className='a2' spacing={2} direction={'row'} pt={'2vh'}>
-                <a className='download_btn' href={cv} download="Arya_CV"><button >Download CV</button></a>
-                <button ><a href="#contact">Let's Talk</a></button>
+                <a className='download_btn' href={cv} download="Arya_CV"><motion.button initial={{ scale: 0 }}
+                  whileInView={{ scale: 1 }}
+                  transition={{ duration: .2 }} >Download CV</motion.button></a>
+                <motion.button initial={{ scale: 0 }}
+                  whileInView={{ scale: 1 }}
+                  transition={{ duration: .2 }} ><a href="#contact">Let's Talk</a></motion.button>
               </Stack>
             </Stack>
 

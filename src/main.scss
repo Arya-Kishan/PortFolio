@@ -39,7 +39,6 @@ button {
     width: 100vw;
     z-index: 2;
     transition: all .4s ease;
-    box-shadow: 0 0 8px 4px white;
 }
 
 .navbar {
@@ -303,6 +302,7 @@ a {
     display: grid;
     grid-template-columns: .2fr .8fr;
     grid-template-rows: 1fr 1fr;
+    gap: 3px;
 }
 
 .ac1 {
@@ -317,6 +317,7 @@ a {
     .aw {
         font-size: 15px;
     }
+
     .exp_box_heading {
         font-size: 20px;
     }
@@ -344,6 +345,8 @@ a {
 }
 
 .card {
+    height: 500px;
+    width: 300px;
     cursor: pointer;
     background-color: $bg-input-card;
     @include flex(column, space-around, flex-start, 20px);
@@ -352,19 +355,36 @@ a {
     border-radius: 20px;
     box-shadow: 0 0 10px 7px white;
 
-    & img {
-        height: 500px;
-        width: 300px;
-        border-radius: 20px;
+}
 
-        @media screen and (max-width : 700px) {
-            & {
-                height: 450px;
-                width: 250px;
-            }
-        }
+.card img {
+    height: 500px;
+    width: 300px;
+    border-radius: 20px;
+}
+.product_more_btn{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
+}
+
+@media screen and (max-width : 700px) {
+    .card {
+        height: 420px;
+        width: 220px;
     }
 
+    .card img {
+        height: 420px;
+        width: 220px;
+    }
+    .product_more_btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+    }
 }
 
 .card_action {
@@ -469,6 +489,6 @@ a {
     position: fixed;
     top: 0;
     left: 0;
-    background: linear-gradient(transparent,black);
+    background: linear-gradient(transparent, black);
     z-index: 12;
 }

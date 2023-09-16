@@ -14,8 +14,10 @@ const Navbar = () => {
   window.addEventListener('scroll', () => {
     if (window.scrollY > 5) {
       setBg('blue')
+      document.querySelector('.nav').style.boxShadow = '0 0 8px 5px white'
     } else if (window.scrollY < 5) {
       setBg('transparent')
+      document.querySelector('.nav').style.boxShadow = '0 0 0 0 black'
     }
   })
 
