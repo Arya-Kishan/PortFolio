@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/PortFolio/static/css/main.157e3a82.css",
-    "main.js": "/PortFolio/static/js/main.bb5af1c0.js",
+    "main.css": "/PortFolio/static/css/main.93db4a01.css",
+    "main.js": "/PortFolio/static/js/main.65af77ba.js",
     "static/media/code1.png": "/PortFolio/static/media/code1.1cba8dab5d3900749025.png",
     "static/media/music.jpeg": "/PortFolio/static/media/music.60a7b60cabcbb8e0b3bd.jpeg",
     "static/media/Trailflix.jpeg": "/PortFolio/static/media/Trailflix.eddba160d9a71b0d36b7.jpeg",
@@ -14,12 +14,15 @@
     "static/media/school.jpeg": "/PortFolio/static/media/school.afa68fa35f1e0a98469c.jpeg",
     "static/media/arya_cv.pdf": "/PortFolio/static/media/arya_cv.3d7e7fca3fc9b7a29cf4.pdf",
     "static/media/Todo.jpeg": "/PortFolio/static/media/Todo.1a307269137e5f53e649.jpeg",
+    "static/media/undraw_programming_re_kg9v.svg": "/PortFolio/static/media/undraw_programming_re_kg9v.e7fd0478451b8d72ff9b93b1ea475b66.svg",
+    "static/media/undraw_react_re_g3ui.svg": "/PortFolio/static/media/undraw_react_re_g3ui.adaba73899b09260ff2b263b9b666531.svg",
+    "static/media/undraw_static_website_re_x70h.svg": "/PortFolio/static/media/undraw_static_website_re_x70h.be3f471d21a244f9eeeee7ada43911d0.svg",
     "index.html": "/PortFolio/index.html",
-    "main.157e3a82.css.map": "/PortFolio/static/css/main.157e3a82.css.map",
-    "main.bb5af1c0.js.map": "/PortFolio/static/js/main.bb5af1c0.js.map"
+    "main.93db4a01.css.map": "/PortFolio/static/css/main.93db4a01.css.map",
+    "main.65af77ba.js.map": "/PortFolio/static/js/main.65af77ba.js.map"
   },
   "entrypoints": [
-    "static/css/main.157e3a82.css",
-    "static/js/main.bb5af1c0.js"
+    "static/css/main.93db4a01.css",
+    "static/js/main.65af77ba.js"
   ]
 }
